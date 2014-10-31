@@ -26,7 +26,7 @@ wrcompiler-config.json:
 ```
 
 ####Run
-`node wrcompiler.js wrcompiler-config.json`
+`wrcompiler wrcompiler-config.json`
 
 ###Result
 Previous example results in two files being created: `./resources/css/compiled.css` and `./resources/js/compiled.js`. They will both contain a combination of two other files. In order, one as-is and the other one minified (uglified).
