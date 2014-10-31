@@ -6,7 +6,7 @@
 	"author" : "Andreas Coroiu <andreas@andreascoroiu.com>",
 	"contributors" : [],
 	"repository" : {"type": "git", "url": "git://github.com/andenq/web-resource-compiler.git"},
-	"version" : "0.2.0",
+	"version" : "0.2.1",
 	"main": "wrcompiler.js",
 	"bin": "./bin/wrcompiler.js",
 	"dependencies" : {

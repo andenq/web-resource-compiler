@@ -29,4 +29,4 @@ wrcompiler-config.json:
 `node wrcompiler.js wrcompiler-config.json`
 
 ###Result
-Previous example results in two files being created: `./resources/css/compiled.css` and `./resources/js/compiled.js`. They will both contain two concatenated files, in order, one as-is and the other one minified (uglified).
+Previous example results in two files being created: `./resources/css/compiled.css` and `./resources/js/compiled.js`. They will both contain a combination of two other files. In order, one as-is and the other one minified (uglified).
