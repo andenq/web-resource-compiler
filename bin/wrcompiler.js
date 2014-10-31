@@ -1,0 +1,16 @@
+/**
+ * Runnable file for web-resource-complier
+ * @param	{string} path to configuration file.
+ * @return	{string} results.
+ */
+(function() {
+	var wrcompiler 	= require('../wrcompiler.js'),
+		fs 			= require('fs');
+
+	var args		= process.argv.slice(2),
+		config 		= JSON.parse(fs.readFileSync(args[0], 'utf8'));
+
+	console.log('Compiling using configuration: "' + args[0] + '"');
+
+	wrcompiler.compile(config, true);
+})();
