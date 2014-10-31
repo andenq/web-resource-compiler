@@ -35,31 +35,43 @@
 
 		var writer = fs.createWriteStream(group_name);
 
-		deferred.map(group, function (file) {
-			var name = "";
-			var concatonly = false;
+		var i = 0;
+		var forFile = function () {
+			handleFile(group[i], writer).done(
+				function() {
+					if (i < group.length-1) {
+						i++;
+						forFile();
+					}
+					else
+						writer.end();
+				},
+				function (error) {
+					log("An error occurred: ");
+					log(error);
+					writer.end();
+				}
+			);
+		};
+		forFile();
+	}
 
-			if (typeof file == "string") {
-				name = file;
-			} else if (typeof file == "object") {
-				name = file.name;
-				concatonly = file.options.indexOf('concatonly') >= 0;
-			}
+	var handleFile = function (file, writer) {
+		var name = "";
+		var concatonly = false;
 
-			if (concatonly) {
-				return concatFile(name, writer);
-			} else {
-				return minifyFile(name, writer);
-			}
-		}).done(
-			function(data) {
-				writer.end();
-			},
-			function (error) {
-				log("An error occurred: ");
-				log(error);
-			}
-		);
+		if (typeof file == "string") {
+			name = file;
+		} else if (typeof file == "object") {
+			name = file.name;
+			concatonly = file.options.indexOf('concatonly') >= 0;
+		}
+
+		if (concatonly) {
+			return concatFile(name, writer);
+		} else {
+			return minifyFile(name, writer);
+		}
 	}
 
 	var concatFile = function (file, writer) {

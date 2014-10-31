@@ -1,0 +1,17 @@
+{
+	"./testfiles/css/compiled.css": [
+		{
+			"name": "./testfiles/css/src/bootstrap.min.css",
+			"options": ["concatonly"]
+		},
+		"./testfiles/css/src/home-stylesheet.css"
+	],
+	"./testfiles/js/compiled.js": [
+		{
+			"name": "./testfiles/js/src/jquery-1.9.1.min.js",
+			"options": ["concatonly"]
+		},
+		"./testfiles/js/src/scene.js",
+		"./testfiles/js/src/smoothzoom.min.js"
+	]
+}
