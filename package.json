@@ -1,12 +1,12 @@
 {
 	"name" : "wrcompiler",
-	"description" : "Small helper for the Minify node module, compiling using a .json configuration file.",
+	"description" : "Tool for automatically compiling all your CSS and JS files using an easy to setup configuration file.",
 	"homepage" : "https://github.com/andenq/web-resource-compiler",
 	"keywords" : ["util", "web", "server", "client", "css", "js", "compile", "uglify"],
 	"author" : "Andreas Coroiu <andreas@andreascoroiu.com>",
 	"contributors" : [],
 	"repository" : {"type": "git", "url": "git://github.com/andenq/web-resource-compiler.git"},
-	"version" : "0.2.2",
+	"version" : "0.2.3",
 	"main": "wrcompiler.js",
 	"bin": "./bin/wrcompiler.js",
 	"dependencies" : {
