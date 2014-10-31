@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /**
  * Runnable file for web-resource-complier
  * @param	{string} path to configuration file.
